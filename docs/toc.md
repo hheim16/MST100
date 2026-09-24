@@ -1,9 +1,9 @@
 ---
 id: toc
-title: Table of contents
+title: Lab Schedule
 sidebar_position: 2
 slug: /toc
-description: Contents of (course notes title here)
+description: Order of Labs and Assignments
 ---
 
 # Table of contents
