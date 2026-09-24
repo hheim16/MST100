@@ -1,21 +1,12 @@
 ---
 id: intro
-title: Introduction
+title: Welcome to MST100
 sidebar_position: 1
 slug: /
-description: Contents of (course notes title here)
+description: Landing Home Page for MST100
 ---
 
-# Introduction
+# Welcome to OPS345 - Administration of Open Source Systems
 
-This is a demonstration of a docusaurus template that we use to create OER's.
+Pardon my mess. This page is under construction. 
 
-## PDF version of these notes:
-
-A pdf version of these notes can be found here:
-
-[pdf version of these notes](https://seneca-ictoer.github.io/OERTemplate/pdf/OERTemplate.pdf)
-
-## PDF Generator
-
-The pdf version of these notes were created using pdf-prince plugin and Prince 14 which is available here: http://www.princexml.com/
