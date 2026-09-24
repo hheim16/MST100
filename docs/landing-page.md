@@ -6,7 +6,7 @@ slug: /
 description: Landing Home Page for MST100
 ---
 
-# Welcome to OPS345 - Administration of Open Source Systems
+# Welcome to MST100 - Introduction to Microsoft Server
 
 Pardon my mess. This page is under construction. 
 
