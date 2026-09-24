@@ -5,21 +5,21 @@ import rehypeKatex from 'rehype-katex';
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'OER Course Title',
-  tagline: 'OER Tag/Keyword',
-  url: 'https://seneca-ictoer.github.io/',
-  baseUrl: '/OERTemplate/',
+  title: 'MST100 - Introduction to Microsoft Server',
+  tagline: 'MST100',
+  url: 'https://hheim16.github.io/',
+  baseUrl: '/MST100/',
   trailingSlash: false,
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'seneca-ictoer',
-  projectName: 'OERTemplate',
+  organizationName: 'hheim16',
+  projectName: 'MST100',
   themeConfig: {
     navbar: {
-      title: 'OER Course Title',
+      title: 'MST100 - Introduction to Microsoft Server',
       logo: {
-        alt: 'Seneca Polytechnic',
+        alt: 'Hans Heim',
         src: 'img/logo.svg',
         srcDark: 'img/logo-dark.svg',
       },
@@ -37,7 +37,7 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'OER Course Title',
+          title: 'MST100 - Introduction to Microsoft Server',
           items: [
             {
               html: `<a href='#' id='pwa-button' class='footer__link-item' hidden>Install as an App</a>`,
@@ -45,7 +45,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Seneca Polytechnic.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Hans Heim.`,
     },
     prism: {
       theme: lightCodeTheme,
