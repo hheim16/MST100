@@ -2,7 +2,6 @@
 id: pracassignment
 title: MST100 Practical Assignment
 sidebar_position: 4
-slug: /
 description: Practical Assignment for MST100
 ---
 
