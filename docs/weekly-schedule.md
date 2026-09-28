@@ -2,7 +2,7 @@
 id: weekly-schedule
 title: Weekly Schedule
 sidebar_position: 2
-description: Weekly Schedule for OPS345
+description: Weekly Schedule for MST100
 ---
 
 # Weekly Schedule

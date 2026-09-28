@@ -94,12 +94,15 @@ Now you have your ISOs in the right place and you have your directories ready to
 
 The last thing we have to do is gather some information about our virtual machines and virtual network that we will be using later in the semester.
 
-Below this picture of the chart, you will find a link below to a downloadable file of the MST100 Pre-Lab Chart.
+Below this picture of the chart, you will find a link to a downloadable file of the MST100 Pre-Lab Chart.
 
 ![MST100 Pre-Lab Chart](/img/mst100prelabchartpic.png)
 
 [Download MST100 Pre Lab Chart](/files/MST100PreLabChart.docx)
 
-You must download this file, fill it out fully, and upload it to the Lab 1 submission page in Blackboard.
+You must download this file and fill it out completely.
 
+## Lab 1 Sign Off
+
+Upload your fully completed MST 100 Pre-Lab Chart to the Lab 1 submission page in Blackboard.
 
