@@ -1,11 +1,23 @@
 ---
 id: lab1
-title: Lab 1
+title: Lab 1 - Preparing for the course
 sidebar_position: 1
-description: Lab 1
+description: Preparing for the course, gathering necessary materials
 ---
 
-# Header 1
+# Lab 1 - Preparing for the course
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Overview
 
+This week's lab will cover the following:
+
+- Gathering the necessary materials to run this course:
+  - External hard drive
+  - Windows Server 2025 ISO
+  - Windows 11 ISO   
+- Establishing a networking scheme for our virtual machines
+- Using KVM to replicate physical network with a virtual one
+
+## Lab 1 Notes
+
+Most of the work in MST100 will be done on 3 Virtual Machines.
