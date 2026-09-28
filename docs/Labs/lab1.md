@@ -21,3 +21,9 @@ This week's lab will cover the following:
 ## Lab 1 Notes
 
 Most of the work in MST100 will be done on 3 Virtual Machines.
+
+## Pre-Lab Chart
+
+[Download Doc](/files/PreLab Chart.docx)
+
+## Next
