@@ -24,6 +24,6 @@ Most of the work in MST100 will be done on 3 Virtual Machines.
 
 ## Pre-Lab Chart
 
-[Download Doc](/files/PreLab Chart.docx)
+[Download MST100 Pre Lab Chart](/files/MST100PreLabChart.docx)
 
 ## Next
