@@ -96,9 +96,9 @@ The last thing we have to do is gather some information about our virtual machin
 
 Below this picture of the chart, you will find a link to a downloadable file of the MST100 Pre-Lab Chart.
 
-![MST100 Pre-Lab Chart](/img/mst100prelabchartpic.png)
+![MST100 Pre-Lab Chart](/img/mst100prelabchart2025pic.png)
 
-[Download MST100 Pre Lab Chart](/files/MST100PreLabChart.docx)
+[Download MST100 Pre Lab Chart](/files/MST100PreLabChart2025.docx)
 
 You must download this file and fill it out completely.
 
