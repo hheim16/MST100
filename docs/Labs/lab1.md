@@ -86,7 +86,7 @@ Now that we have our ISOs we are going to store them on our external hard drive 
 5. Finally, find the Windows Server 2025 Datacenter and Windows 11 Education ISOs on your computer (probably in your Downloads directory) and copy them into your newly created "ISOs" directory.
 6. Find the text file that has your Windows security key in it and copy it into the "Notes" directory on your external hard drive.
 
-DO NOT LOSE THIS KEY. DO NOT SHARE THIS KEY WITH ANYONE. You may want to also store a copy of this key in your OneDrive just in case your hard drive is rendered unusable.
+**DO NOT LOSE THIS KEY. DO NOT SHARE THIS KEY WITH ANYONE.** You may want to also store a copy of this key in your OneDrive just in case your hard drive is rendered unusable.
 
 Now you have your ISOs and security key in the right place and you have your directories ready to install to in next week's lab.
 
