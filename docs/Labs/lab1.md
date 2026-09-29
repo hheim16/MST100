@@ -20,7 +20,7 @@ This week's lab will cover the following:
 
 ## Lab 1 Notes
 
-Most of the work in MST100 will be done on 3 Virtual Machines.It is highly recommended that you install these virtual machines using the Seneca lab computers as that is the environment that this (and all other) labs have been written and tested in. If you have a powerful enough laptop, you can install VMWare Workstation onto it and install the VMs on it. This can be useful as you will be able to complete the lab work at home as well as on campus.
+Most of the work in MST100 will be done on 3 Virtual Machines. It is highly recommended that you install these virtual machines using the Seneca lab computers as that is the environment that this (and all other) labs have been written and tested in. If you have a powerful enough laptop, you can install VMWare Workstation onto it and install the VMs on it. This can be useful as you will be able to complete the lab work at home as well as on campus.
 
 But a word of warning...
 
@@ -31,7 +31,7 @@ If you choose to use your own laptop for this course, you assume all responsibil
 By the end of this lab, you will be able to:
 
 - Acquire Windows Server 2025 Datacenter and Windows 11 Education installation media and your individual product key from Azure Education and store them securely.
-- Access VMware Workstation on a Seneca Lab PC (locally or via MyApps) or install it on a personal PC.
+- Access VMware Workstation on a Seneca Lab PC (or install it on a personal PC).
 - Establish a networking scheme for your virtual machines
 
 ## Investigation 1: Downloading Installation Media
@@ -48,17 +48,14 @@ In this part, you will be downloading your Windows Server OS installation media 
 4. In the Search bar, type: Education, then hit Enter.
 5. In the Education | Overview page, look to the left. You will see menu items already displayed on screen. (Overview, Learning resources, etc.)
 6. Inside Learning resources in the left menu, click on Software.
-7. In the main Software page, there is a Search bar just below the word Software (it says Search inside it.)
+7. In the main Software page, there is a Search bar just below the word Software (it says "Search" inside it.)
 8. In that search field, type and enter: Windows Server 2025 Datacenter
 9. In the item that appears below (there should only be one), click the link for Windows Server 2025 Datacenter.
 10. On the right, an information box appears describing the software. Using your mouse to hover over this information box, scroll down to the bottom.
 11. You should now see two items: View Key and Download
 12. Click on Download first to begin downloading the Server 2025 ISO. You will need this for your operating system installation. (Don't forget where you've saved it!)
 13. While the ISO file is downloading, click on View Key.
-14. Copy this key into a text file that you save locally on your personal computer or personal USB key. You will need this for the Server installation and for any reinstalls later in the semester.
-15. Reminder: Always store all serial keys in a secure location only you have access to.
-
-Do not lose this key and do NOT share it with anyone!
+14. Copy this key into a text file that you save locally on your computer. You will need this for the Server installation and for any reinstalls later in the semester. DO NOT FORGET WHERE YOU SAVED THIS. We will be moving it to a secure location shortly.
 
 ### Part 2: Windows 11 Education
 
@@ -87,8 +84,11 @@ Now that we have our ISOs we are going to store them on our external hard drive 
   - "Server2"
   - "Client1"
 5. Finally, find the Windows Server 2025 Datacenter and Windows 11 Education ISOs on your computer (probably in your Downloads directory) and copy them into your newly created "ISOs" directory.
+6. Find the text file that has your Windows security key in it and copy it into the "Notes" directory on your external hard drive.
 
-Now you have your ISOs in the right place and you have your directories ready to install to in next week's lab.
+DO NOT LOSE THIS KEY. DO NOT SHARE THIS KEY WITH ANYONE. You may want to also store a copy of this key in your OneDrive just in case your hard drive is rendered unusable.
+
+Now you have your ISOs and security key in the right place and you have your directories ready to install to in next week's lab.
 
 ## Investigation 2: MST100 Pre-Lab Chart
 
