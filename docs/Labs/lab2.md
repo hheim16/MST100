@@ -20,7 +20,7 @@ This week's lab will cover the following:
 
 ## Lab 2 Notes
 
-
+The primary method to run do the labs in MST100 is to use virtual machines running on 
 
 ## Objectives
 
@@ -97,9 +97,9 @@ Now that our Server1 is installed, there are a few things we need to do to prepa
 24. Once it is installed, open Firefox and go to google.com to make sure everything is working.
 25. Shutdown your Server1.
 
+**Note:** During installations it is a good idea to only have one VM (the one you are installing) powered on at a time.
 
-
-### Part 2-1: Installing Windows Server 2025 (No GUI)
+### Part 2-1: Installing Windows Server 2025 Core (No GUI)
 
 Now we are going to install our second server, Server2. This installation will be very similar to the first, although the server will look quite different when we are done. 
 
@@ -114,7 +114,7 @@ Now we are going to install our second server, Server2. This installation will b
 9. For "Password", enter "P@ssw0rd".
 10. Do **NOT** check "Log on automatically". Click "Next".
 11. For "Virtual Machine name", enter "Server2".
-12. For "Location", click "Browse" and navigate to and select the directory called "Server2" in your external hard drive and click "OK". Confirm the path to your "Server1" directory has been selected (this is important, if you create your VM on the lab computer and not your external hard drive, it will be lost when you turn off the computer). Click "Next". 
+12. For "Location", click "Browse" and navigate to and select the directory called "Server2" in your external hard drive and click "OK". Confirm the path to your "Server2" directory has been selected (this is important, if you create your VM on the lab computer and not your external hard drive, it will be lost when you turn off the computer). Click "Next". 
 13. Leave the disk size at 60 GB and select "Store virtual disk as a single file". Click "Next"
 14. Click "Customize Hardware".
 15. Change "Memory" to 4096 MB.
@@ -122,39 +122,102 @@ Now we are going to install our second server, Server2. This installation will b
 17. The virtual machine will launch and the installation will begin. You will be asked to put your product key in once again. Do so and click "Next".
     - *to "paste" into the VM, click inside the Product Key box so that the cursor is seen inside it, then click "Edit" in VMWare and select "Paste".
 18. From here, most of the installation will be automatic. The VM will restart several times during the installation.
-19. Eventually you will land on the Windows Server 2025 desktop and VMWare Tools will auto-install. When it is finished, it will ask you to restart the system. Click "Yes" and your VM will reboot. 
+19. Eventually you will land on the Windows Server 2025 Core config screen and VMWare Tools will auto-install. When it is finished, it will ask you to restart the system. Click "Yes" and your VM will reboot. 
 
-### Part 3: Creating Your MST100 Working Directories and Storing the ISOs Inside
+### Part 2-2: Windows Server 2025 Core Post-Installation Tasks
 
-Now that we have our ISOs we are going to store them on our external hard drive so that we can use them to create our virtual machines in Lab 2. Before we actually move them, we are going to create a nice, organized directory structure for all of our MST100 lab work.
+Now that Server2 is installed we are going to perform the same post-installation tasks that we did on Server1. However, because this is the "Core" version of Windows Server 2025 there is no GUI and so our configurations will be done a little differently.
 
-1. Plug your external hard drive into the computer you downloaded your ISOs onto and open the File Explorer.
-2. Navigate to your external hard drive.
-3. Create a directory called "MST100" and move into that directory.
-4. Inside the MST100 directory create the following 5 directories:
-  - "ISOs"
-  - "Notes"
-  - "Server1"
-  - "Server2"
-  - "Client1"
-5. Finally, find the Windows Server 2025 Datacenter and Windows 11 Education ISOs on your computer (probably in your Downloads directory) and copy them into your newly created "ISOs" directory.
+1. Begin by logging into Server2 (again, click "VM" in VMWare and then select "Send Ctrl+Alt+Del").
+2. Put in your password and you will be brought to the SConfig screen. SConfig is a module that allows us to make basic system configurations without the need for commands or a GUI.
+3. Find the option for "Date and Time", enter the corresponding number, and press "Enter". The Date and Time window should appear.
+4. Check to ensure that UTC -05:00 Eastern Time is selected. If not change it to that time zone. Press "OK".
+5. Next we will change the computer name. Find the option for "Computer Name", enter the corresponding number, and press "Enter".
+6. Type in your computer name as "S2-SenecaID" (for example, my Seneca ID is hheim so my Server2 computer name would be "S2-hheim").
+7. The system will ask you to restart. Select "(Y)es".
+8. Once the system reboots and you have logged back in to the SConfig screen, find the option for "Update Settings", enter the corresponding number, and press "Enter".
+9. On the "Update Settings" screen, enter "5" (Opt-in to Microsoft Update) and press "Enter". Press "Y" and press "Enter" on the next screen to confirm. Press "Enter" to continue.
+10. Back on the SConfig screen, find the option for "Install Updates", enter the corresponding number, and press "Enter".
+11. Enter "1" (All quality updates) and press "Enter".
+12. Windows Server will search for applicable updates and eventually it will ask you which updates to install. Enter "A" (All Updates) and press "Enter".
+13. Windows Server will not download and install its updates. This may take a while.
+14. Once the installations are complete, the system will ask you to restart. Enter "Y" (yes) and press "Enter".
+15. Server2 will restart. It may continue updating and restart again.
+16. When Server2 comes back up, log in and go back into the "Install Updates" option. Once again, Enter "1" and press "Enter".
+17. If there are any remaining updates, enter "Y" and press "Enter". Then, reboot if asked to.
+18. Repeat these steps until searching for all quality updates results in the "There are no applicable updates" message. Press "Enter" to return to the SConfig screen.
+19. Shut down Server2.
 
-Now you have your ISOs in the right place and you have your directories ready to install to in next week's lab.
+### Part 3-1: Installing Windows 11 Education
 
-## Investigation 2: MST100 Pre-Lab Chart
+In this part we are going to install our Client1 system which will be running Windows 11 Education. Unfortunately, Windows 11 does not have an Easy Install feature in VMWare so this installation will be a little more involved.
 
-The last thing we have to do is gather some information about our virtual machines and virtual network that we will be using later in the semester.
+1. Click "Create a New Virtual Machine" on the Home tab in VMWare Workstation Pro.
+2. Select "Typical" and click "Next".
+3. Select "Installer disc image file (iso)" and then click "Browse".
+4. Navigate to the ISOs directory on your external hard drive and open the Windows 11 ISO. 
+5. You should notice a message below the path to the ISO that says "Windows 11 x64 detected. Click "Next"
+6. For "Virtual Machine name", enter "Client1".
+7. For "Location", click "Browse" and navigate to and select the directory called "Client1" in your external hard drive and click "OK". Confirm the path to your "Client1" directory has been selected (this is important, if you create your VM on the lab computer and not your external hard drive, it will be lost when you turn off the computer). Click "Next".
+8. Windows 11 uses TPM hardware to encrypt certain important files. VMware Worksation adds the TPM module automatically as long as you select the right options:
+  - Choose Encryption Type: Only the files needed to support a TPM are encrypted.
+  - Password: Your normal VM password.
+9. Click "Next".
+10. Leave the disk size at 64 GB and select "Store virtual disk as a single file". Click "Next"
+11. Click "Customize Hardware".
+12. Change "Processors" to 1 Processor and 4 cores per processor. Click "Close". Click "Finish".
+13. When the VM starts, pay close attention to the black screen. As soon as you see the "Press any key..." message, click with your mouse into the VM and press the space bar. Failure to do so will result in the VM not booting to its installer and you will have to begin again.
+14. On the "language setting" screen, use the default selections and click "Next".
+15. On the "keyboard setting" screen, use the default selections and click "Next".
+16. On the "setup option" screen, select "Install Windows 11", check the "I agree everything..." box and click "Next".
+17. On the next screen, enter your Product Key for Windows 11 (this will be a different key than the Windows Server key) and click "Next".
+18. Accept the license terms on the next screen.
+19. On the "location to install" screen, select the only available option and click "Next".
+20. On the "Ready to install" screen, click "Install".
+21. Windows 11 will now install. It will reboot and take some time before you arrive at the next input screen.
+22. When you regain control you will be on the "country or region screen". Select "Canada" and click "Yes".
+23. On the "keyboard layout" screen, leave the default ("US") and click "Yes".
+24. Skip a second keyboard layout.
+25. Windows will now check for updates and install them as necessary.
+26. The next screen you see will be the "Sign in" screen. Click "Sign-in options" and then click "Domain join instead".
+27. For your name, use your SenecaID (ex. hheim) and click "Next".
+28. For your password, use "P@ssw0rd" and click "Next".
+29. Next, fill out 3 security questions, clicking "Next" along the way.
+30. Select "No", "No", "Required Only", "No", "No" on the next 5 screens.
+31. Windows will then do some more updates. This may take some time and the system may reboot.
+32. When it is done with updating, you will land on the Windows 11 desktop.
 
-Below this picture of the chart, you will find a link to a downloadable file of the MST100 Pre-Lab Chart.
 
-![MST100 Pre-Lab Chart](/img/mst100prelabchartpic.png)
+### Part 3-2: Post-installation Tasks for Windows 11
 
-[Download MST100 Pre Lab Chart](/files/MST100PreLabChart.docx)
+Now that our Client1 is installed, there are a few things we need to do to prepare it for our labs similar to what we did on Server1 and Server2. 
 
-You must download this file and fill it out completely.
+We will begin with the basics - time zone and computer name.
 
-## Lab 1 Sign Off
+1. Right-click on the time in the bottom-right corner of the Windows 11 VM and left-click "Adjust date and time".
+2. Make sure the time zone is set to UTC -05:00 Eastern Time.
+3. Click the Windows icon at the bottom of the screen (4 blue squares), type "Computer Name", and then click on "View your PC name".
+4. Click "Rename this PC" and give it the name "C1-SenecaID" (for example, my Seneca ID is hheim so my Client1 computer name would be "C1-hheim").
+5. You will be asked if you want to restart the computer. Restart it.
+6. When the computer comes back up, log in and click on the Windows icon at the bottom of the screen (4 blue squares). Type "updates" and click "Check for Updates".
+7. Click the blue "Check for Updates" button in the Windows Update window.
+8. While they are downloading , scroll down and click on "Advanced Options".
+10. Turn the "Receive updates to other Microsoft products" toggle from **Off** to **On**.
+11. Click "Windows Update" at the top of the screen to get back to the main Updates window.
+12. Like on Server1, get your Client1 fully updated. This may require some time and reboots but keep updating until you are met with the "You're up to date" message.
 
-Upload your fully completed MST 100 Pre-Lab Chart to the Lab 1 submission page in Blackboard.
+Now that your system is fully up to date, there is one more thing we have to do. Recall that with Server1 and Server2, something called VMWare tools was automatically installed when the initial installation was complete. This will not happen on Windows 11. We will have to install it manually.
+
+13. 
+
+
+## Lab 2 Sign Off
+
+Take the following 3 screenshots:
+- Go into
+- Go into
+- Go into
+
+Put all 3 of these screenshots into a text document and upload it to the Lab 2 Submission page in Blackboard.
 
 
