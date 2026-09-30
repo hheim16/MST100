@@ -14,7 +14,7 @@ This week's lab will cover the following:
 - Accessing VMWare Workstation Pro
 - Installing the following 3 Virtual Machines:
   - Server1: Windows Server 2025 Datacenter (with GUI)
-  - Server2: Windows Server 2025 Datacenter (without GUI)
+  - Server2: Windows Server 2025 Datacenter Core (without GUI)
   - Client1: Windows 11 Education   
 - Performing post-installation tasks on all 3 virtual machines
 
@@ -52,18 +52,20 @@ In this part, you will install Windows Server 2025 Datacenter with a GUI.
 4. Navigate to the ISOs directory on your external hard drive and open the Windows Server 2025 ISO. 
 5. You should notice a message below the path to the ISO that says "Windows Server 2025 detected. This operating system will use Easy Install". Click "Next"
 6. Enter your Windows Server 2025 product key (which should be in your "Keys" file on your external hard drive).
-7. For "Full name", enter "Administrator".
-8. For "Password", enter "P@ssw0rd". Click "Next".
-9. For "Virtual Machine name", enter "Server1".
-10. For "Location", click "Browse" and navigate to and select the directory called "Server1" in your external hard drive and click "OK". Confirm the path to your "Server1" directory has been selected (this is important, if you create your VM on the lab computer and not your external hard drive, it will be lost when you turn off the computer). Click "Next". 
-11. Leave the disk size at 60 GB and select "Store virtual disk as a single file". Click "Next"
-12. Click "Customize Hardware".
-13. Change "Memory" to 4096 MB.
-14. Change "Processors" to 1 Processor and 4 cores per processor. Click "Close". Click "Finish".
-15. The virtual machine will launch and the installation will begin. You will be asked to put your product key in once again. Do so and click "Next".
+7. For "Version of Windows to Install" leave the default (should be "Windows Server 2025 Datacenter").
+8. For "Full name", enter "Administrator".
+9. For "Password", enter "P@ssw0rd".
+10. Do **NOT** check "Log on automatically". Click "Next".
+11. For "Virtual Machine name", enter "Server1".
+12. For "Location", click "Browse" and navigate to and select the directory called "Server1" in your external hard drive and click "OK". Confirm the path to your "Server1" directory has been selected (this is important, if you create your VM on the lab computer and not your external hard drive, it will be lost when you turn off the computer). Click "Next". 
+13. Leave the disk size at 60 GB and select "Store virtual disk as a single file". Click "Next"
+14. Click "Customize Hardware".
+15. Change "Memory" to 4096 MB.
+16. Change "Processors" to 1 Processor and 4 cores per processor. Click "Close". Click "Finish".
+17. The virtual machine will launch and the installation will begin. You will be asked to put your product key in once again. Do so and click "Next".
     - *to "paste" into the VM, click inside the Product Key box so that the cursor is seen inside it, then click "Edit" in VMWare and select "Paste".
-16. From here, most of the installation will be automatic. The VM will restart several times during the installation.
-17. Eventually you will land on the Windows Server 2025 desktop and VMWare Tools will auto-install. When it is finished, it will ask you to restart the system. Click "Yes" and your VM will reboot. 
+18. From here, most of the installation will be automatic. The VM will restart several times during the installation.
+19. Eventually you will land on the Windows Server 2025 desktop and VMWare Tools will auto-install. When it is finished, it will ask you to restart the system. Click "Yes" and your VM will reboot. 
 
 ### Part 1-2: Windows Server 2025 GUI Post-Installation Tasks
 
@@ -97,18 +99,30 @@ Now that our Server1 is installed, there are a few things we need to do to prepa
 
 
 
-### Part 2: Windows 11 Education
+### Part 2-1: Installing Windows Server 2025 (No GUI)
 
-This part is similar to Part 1. We'll follow many of the same steps and download a copy of Windows 11 instead.
+Now we are going to install our second server, Server2. This installation will be very similar to the first, although the server will look quite different when we are done. 
 
-1. Log back into the Microsoft Azure website.
-2. Go to: Education > Learning Resources > Software
-3. In the search field, type and enter: Windows 11 Education
-4. Download the ISO.
-5. Click on View Key to save your Windows 11 Education serial key in a secure text file.
-6. Reminder: Always store all serial keys in a secure location only you have access to.
-
-Do not lose this key and do NOT share it with anyone!
+1. Click "Create a New Virtual Machine" on the Home tab in VMWare Workstation Pro.
+2. Select "Typical" and click "Next".
+3. Select "Installer disc image file (iso)" and then click "Browse".
+4. Navigate to the ISOs directory on your external hard drive and open the Windows Server 2025 ISO. 
+5. You should notice a message below the path to the ISO that says "Windows Server 2025 detected. This operating system will use Easy Install". Click "Next"
+6. Enter your Windows Server 2025 product key (which should be in your "Keys" file on your external hard drive).
+7. For "Version of Windows to Install" change it to "Windows Server 2025 Datacenter Core". **VERY IMPORTANT!!**
+8. For "Full name", enter "Administrator".
+9. For "Password", enter "P@ssw0rd".
+10. Do **NOT** check "Log on automatically". Click "Next".
+11. For "Virtual Machine name", enter "Server2".
+12. For "Location", click "Browse" and navigate to and select the directory called "Server2" in your external hard drive and click "OK". Confirm the path to your "Server1" directory has been selected (this is important, if you create your VM on the lab computer and not your external hard drive, it will be lost when you turn off the computer). Click "Next". 
+13. Leave the disk size at 60 GB and select "Store virtual disk as a single file". Click "Next"
+14. Click "Customize Hardware".
+15. Change "Memory" to 4096 MB.
+16. Change "Processors" to 1 Processor and 4 cores per processor. Click "Close". Click "Finish".
+17. The virtual machine will launch and the installation will begin. You will be asked to put your product key in once again. Do so and click "Next".
+    - *to "paste" into the VM, click inside the Product Key box so that the cursor is seen inside it, then click "Edit" in VMWare and select "Paste".
+18. From here, most of the installation will be automatic. The VM will restart several times during the installation.
+19. Eventually you will land on the Windows Server 2025 desktop and VMWare Tools will auto-install. When it is finished, it will ask you to restart the system. Click "Yes" and your VM will reboot. 
 
 ### Part 3: Creating Your MST100 Working Directories and Storing the ISOs Inside
 
