@@ -5,7 +5,7 @@ sidebar_position: 2
 description: Installing 3 virtual machines that will be used for the rest of the course.
 ---
 
-# Lab 1: Preparing for the course
+# Lab 2: Installing Windows Server 2025 and Windows 11 Virtual Machines
 
 ## Overview
 
@@ -18,47 +18,84 @@ This week's lab will cover the following:
   - Client1: Windows 11 Education   
 - Performing post-installation tasks on all 3 virtual machines
 
-## Lab 1 Notes
+## Lab 2 Notes
 
-Most of the work in MST100 will be done on 3 Virtual Machines.It is highly recommended that you install these virtual machines using the Seneca lab computers as that is the environment that this (and all other) labs have been written and tested in. If you have a powerful enough laptop, you can install VMWare Workstation onto it and install the VMs on it. This can be useful as you will be able to complete the lab work at home as well as on campus.
 
-But a word of warning...
-
-If you choose to use your own laptop for this course, you assume all responsibility for ensuring the stability of your system. Your teacher will not be able to help you if you run into problems with your laptop.
 
 ## Objectives
 
 By the end of this lab, you will be able to:
 
-- Acquire Windows Server 2025 Datacenter and Windows 11 Education installation media and your individual product key from Azure Education and store them securely.
-- Access VMware Workstation on a Seneca Lab PC (locally or via MyApps) or install it on a personal PC.
-- Establish a networking scheme for your virtual machines
+- use VMWare to install virtual machines
+- install a GUI version of Windows Server 2025
+- install a GUI-less version of Windows Server 2025
+- install an Education version of Windows 11
+- recognize the differences in these installations and the time/resources needed for each
 
-## Investigation 1: Downloading Installation Media
+## Investigation 1: Installing your VMs
 
-In this investigation, you will download both ISOs required to install all our virtual machines for this course, along with serial keys assigned to your Seneca username.
+In this investigation, you will install all 3 virutual machines using VMWare Workstation Pro on a Seneca lab computer.
 
-### Part 1: Windows Server 2025 Datacenter
+1. Begin by logging into a Seneca lab computer and then plugging in your external hard drive (which should have your ISO files and Keys text file on it from Lab 1)
+2. Check to make sure your external hard drive is recognized by the computer by opening the File Explorer and navigating to your external hard drive.
+3. Double check that the directories you created in lab 1 are there.
+4. Open VMWare Workstation Pro from the desktop.
 
-In this part, you will be downloading your Windows Server OS installation media by logging into your Seneca-based Azure account. You will also generate your personal serial keys for your copy of Server.
 
-1. Navigate to the Microsoft Azure site:  [portal.azure.com](portal.azure.com)
-2. Use your Seneca e-mail address and password to login.
-3. Once on the main Azure page, look for the Search bar at the top of the page.
-4. In the Search bar, type: Education, then hit Enter.
-5. In the Education | Overview page, look to the left. You will see menu items already displayed on screen. (Overview, Learning resources, etc.)
-6. Inside Learning resources in the left menu, click on Software.
-7. In the main Software page, there is a Search bar just below the word Software (it says Search inside it.)
-8. In that search field, type and enter: Windows Server 2025 Datacenter
-9. In the item that appears below (there should only be one), click the link for Windows Server 2025 Datacenter.
-10. On the right, an information box appears describing the software. Using your mouse to hover over this information box, scroll down to the bottom.
-11. You should now see two items: View Key and Download
-12. Click on Download first to begin downloading the Server 2025 ISO. You will need this for your operating system installation. (Don't forget where you've saved it!)
-13. While the ISO file is downloading, click on View Key.
-14. Copy this key into a text file that you save locally on your personal computer or personal USB key. You will need this for the Server installation and for any reinstalls later in the semester.
-15. Reminder: Always store all serial keys in a secure location only you have access to.
+### Part 1-1: Installing Windows Server 2025 Datacenter (GUI)
 
-Do not lose this key and do NOT share it with anyone!
+In this part, you will install Windows Server 2025 Datacenter with a GUI.
+
+1. Click "Create a New Virtual Machine" on the Home tab in VMWare Workstation Pro.
+2. Select "Typical" and click "Next".
+3. Select "Installer disc image file (iso)" and then click "Browse".
+4. Navigate to the ISOs directory on your external hard drive and open the Windows Server 2025 ISO. 
+5. You should notice a message below the path to the ISO that says "Windows Server 2025 detected. This operating system will use Easy Install". Click "Next"
+6. Enter your Windows Server 2025 product key (which should be in your "Keys" file on your external hard drive).
+7. For "Full name", enter "Administrator".
+8. For "Password", enter "P@ssw0rd". Click "Next".
+9. For "Virtual Machine name", enter "Server1".
+10. For "Location", click "Browse" and navigate to and select the directory called "Server1" in your external hard drive and click "OK". Confirm the path to your "Server1" directory has been selected (this is important, if you create your VM on the lab computer and not your external hard drive, it will be lost when you turn off the computer). Click "Next". 
+11. Leave the disk size at 60 GB and select "Store virtual disk as a single file". Click "Next"
+12. Click "Customize Hardware".
+13. Change "Memory" to 4096 MB.
+14. Change "Processors" to 1 Processor and 4 cores per processor. Click "Close". Click "Finish".
+15. The virtual machine will launch and the installation will begin. You will be asked to put your product key in once again. Do so and click "Next".
+    - *to "paste" into the VM, click inside the Product Key box so that the cursor is seen inside it, then click "Edit" in VMWare and select "Paste".
+16. From here, most of the installation will be automatic. The VM will restart several times during the installation.
+17. Eventually you will land on the Windows Server 2025 desktop and VMWare Tools will auto-install. When it is finished, it will ask you to restart the system. Click "Yes" and your VM will reboot. 
+
+### Part 1-2: Windows Server 2025 GUI Post-Installation Tasks
+
+Now that our Server1 is installed, there are a few things we need to do to prepare it for our labs. We are going to ensure our Time Zone is correct and we are going to name our system appropriately. Then we are going to make sure our system is completely updated. FInally, we will confirm internet connectivity and download a better web browser.
+
+1. Log into your Server1. To use Ctrl+Alt+Del in your VM, click "VM" in VMware and select "Send Ctrl+Alt+Del".
+2. You should be met with the Server Manager Dashboard. If not, click on the Server Manager icon at the bottom of the screen.
+3. A pop up will appear asking you to "Try Windows Admin Center/ Azure Arc". Click "Don't show me this message again" and close the pop-up.
+4. Click "Local Server" on the left side of the screen. 
+5. In the "Properties" window, look for "Time Zone" and make sure it is set to "UTC -05:00 Eastern Time". If it is something else, change it to our time zone.
+6. Next, click on the semi-randomized name next to "Computer Name". Then click "Change".
+7. Change the computer name to "S1-SenecaID" (for example, my Seneca ID is hheim so my Server1 computer name would be "S1-hheim").
+8. Leave the default Workgroup selected and click "OK". A message will pop up saying the computer name will not change until the system is restarted. Click "OK".
+9. Close the Computer Name window and another message will pop up asking if you want to restart the computer now. Click "Restart Later".
+10. Next, find "Windows Update" in the "Properties" window and click the blue text beside it. Click the blue "Check for updates" button.
+11. Windows Server will now download and install all necessary updates.
+12. While they are downloading, scroll down and click on "Advanced Options".
+13. Turn the "Receive updates to other Microsoft products" toggle from **Off** to **On**.
+14. Click "Windows Update" at the top of the screen to get back to the main Updates window.
+15. You will likely need to wait a little while for the updates to finish downloading and installing. Eventually, all the updates listed will say "Pending restart". Once you see this, click the blue "Restart now" button.
+16. Server1 will reboot and install updates. This will likely take a while and it will likely reboot a few times but just let it do its thing. Do not turn off the VM while it is updating. If your VM freezes during the updates, check with you teacher before moving forward.
+17. When you are met with the login screen, log in and return to the Updates window.
+18. Click the blue "Check for updates" button. If any remaining updates are available they will install. Repeat this cycle until you are met with a "You're up to date" message.
+19. Next, we are going to confirm internet connectivity and download a different web browser that MS Edge.
+20. Open MS Edge (the icon will be at the bottom of your screen).
+21. Go through the first-run questions (just say no to everything).
+22. Go to the Mozilla Firefox website: www.firefox.com
+23. Download Firefox and install it.
+24. Once it is installed, open Firefox and go to google.com to make sure everything is working.
+25. Shutdown your Server1.
+
+
 
 ### Part 2: Windows 11 Education
 
