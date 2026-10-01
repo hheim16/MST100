@@ -95,7 +95,7 @@ Now that our Server1 is installed, there are a few things we need to do to prepa
 22. Go to the Mozilla Firefox website: www.firefox.com
 23. Download Firefox and install it.
 24. Once it is installed, open Firefox and go to google.com to make sure everything is working.
-25. Shutdown your Server1.
+25. Shut down Server1.
 
 **Note:** During installations it is a good idea to only have one VM (the one you are installing) powered on at a time.
 
@@ -208,15 +208,21 @@ We will begin with the basics - time zone and computer name.
 
 Now that your system is fully up to date, there is one more thing we have to do. Recall that with Server1 and Server2, something called VMWare tools was automatically installed when the initial installation was complete. This will not happen on Windows 11. We will have to install it manually.
 
-13. 
+13. You should notice a beige bar at the bottom of your Client1 VM with a "Install Tools" button. Click that button. (If you don't see the beige bar or the button, click on "VM" in VMWare and then click on "Install VMWare Tools").
+14. Wait a few seconds and you should see a pop up in the bottom right corner of your screen that says "DVD Drive (D:) VMWare Tools". Click this pop up.
+15. A new window will pop up with a "Run setup.exe" button. Click this button. Click "Yes" when the VMware installation launcher window pops up.
+16. The VMware tools installer will start. Click "Next". Select "Typical" and click "Next". Click "Install". Click "Finish" when the installation is complete and then restart Client1.
+17. Log back into Windows and install Firefox the same way you did with Server1.
+18. Shut down Client1.
 
+Congratulations! You now have three fully functioning virtual machines that you will be using for the rest of the course.
 
 ## Lab 2 Sign Off
 
 Take the following 3 screenshots:
-- Go into
-- Go into
-- Go into
+- Log into Server1. Go into the Server Manager on Server1, click on "Local Server", and take a screenshot of the entire "Properties" window.
+- Log into Server2. Take a screenshot of the "Welecome to Windows Server 2025 Datacenter" screen.
+- Log into Client1. Go into the Windows Update window and take a screenshot that shows the "You're up to date" message.
 
 Put all 3 of these screenshots into a text document and upload it to the Lab 2 Submission page in Blackboard.
 
