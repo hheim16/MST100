@@ -221,9 +221,8 @@ Congratulations! You now have three fully functioning virtual machines that you 
 
 Take the following 3 screenshots:
 - Log into Server1. Go into the Server Manager on Server1, click on "Local Server", and take a screenshot of the entire "Properties" window.
-- Log into Server2. Take a screenshot of the "Welecome to Windows Server 2025 Datacenter" screen.
+- Log into Server2. Take a screenshot of the "Welcome to Windows Server 2025 Datacenter" screen.
 - Log into Client1. Go into the Windows Update window and take a screenshot that shows the "You're up to date" message.
 
-Put all 3 of these screenshots into a text document and upload it to the Lab 2 Submission page in Blackboard.
-
+Put all 3 of these screenshots into a single text document and upload it to the Lab 2 Submission page in Blackboard.
 
