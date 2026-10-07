@@ -11,7 +11,9 @@ description: Configuring basic settings in Windows Server and Windows 11
 
 This week's lab will cover the following:
 
-- Accessing
+- Adding and removing roles in Windows Server
+- Learning about and editing the registry
+
 
 ## Lab 3 Notes
 
@@ -20,22 +22,38 @@ The primary method to run do the labs in MST100 is to use virtual machines runni
 ## Objectives
 
 By the end of this lab, you will be able to:
+- Add roles in Windows Server
+- Remove roles in Windows Server
+- Export Registry entries for backup
+- Add registry entries
+- modify registry entries
 
-- use VMWare to
+## Investigation 1: Installing and Removing Roles
 
-## Investigation 1: Installing your VMs
+### Part 1: Installing Roles
 
-In this investigation, you will install all 3 virutual machines using VMWare Workstation Pro on a Seneca lab computer.
+In this investigation, you will install 3 new roles into Server1 and then remove 1.
 
-1. Begin by logging into a Seneca lab computer and then plugging in your external hard drive (which should have your ISO files and Keys text file on it from Lab 1)
-2. Check to make sure your external hard drive is recognized by the computer by opening the File Explorer and navigating to your external hard drive.
-3. Double check that the directories you created in lab 1 are there.
-4. Open VMWare Workstation Pro from the desktop.
+1. Begin by logging into Server1 and open Server Manager.
+2. Click on "Add roles and features".
+3. The "Add Roles and Features" wizard window will appear. Click "Next".
+4. Select "Role based or feature-based installation" and click "Next".
+5. Select your server (it should be the only one there) and click "Next".
+6. The next screen will have a listing of all he available roles that can be installed onto your Windows Server. Check the following 3 roles (*NOTE: As you select each role, it will prompt you to add necessary features for that role. Accept what it gives you to install and click "Add Features"*):
+  - Print and Document Services
+  - Web Server (IIS)
+  - DNS (When selecting DNS you will get a Validation Results warning. Do not worry about this. We will be fixing this issue in lab 4. Just click "Continue" when it appears)
+7. With all 3 roles selected, click "Next".
+8. Click "Next" on the next few windows, accepting the default options each one gives you until you arrive on the "Confirm installation selections" window.
+9. Check the "Restart the destination server automatically if required" box and then click "Install".
+10. Your roles will now be installed onto Windows Server. Wait for the installations to all complete and then click "Close".
+
+You should now see the new roles you installed have been added as tiles in your Server Manager listed under "Roles and Server Groups". They will also appear in the top-left area of Server Manager listed under "Dashboard", "Local Server", and "All Servers". We will leave them for now but we will come back to DNS and IIS in lab 4.
 
 
-### Part 1-1: Installing Windows Server 2025 Datacenter (GUI)
+### Part 2: Removing Roles
 
-In this part, you will install Windows Server 2025 Datacenter with a GUI.
+Now that we have roles 
 
 1. Click "Create a New Virtual Machi
 
