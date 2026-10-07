@@ -28,9 +28,9 @@ By the end of this lab, you will be able to:
 - Add registry entries
 - modify registry entries
 
-## Investigation 1: Installing and Removing Roles
+## Investigation 1: Installing and Removing Roles with a GUI
 
-### Part 1: Installing Roles
+### Part 1: Installing Roles in Server Manager
 
 In this investigation, you will install 3 new roles into Server1 and then remove 1.
 
@@ -48,14 +48,24 @@ In this investigation, you will install 3 new roles into Server1 and then remove
 9. Check the "Restart the destination server automatically if required" box and then click "Install".
 10. Your roles will now be installed onto Windows Server. Wait for the installations to all complete and then click "Close".
 
-You should now see the new roles you installed have been added as tiles in your Server Manager listed under "Roles and Server Groups". They will also appear in the top-left area of Server Manager listed under "Dashboard", "Local Server", and "All Servers". We will leave them for now but we will come back to DNS and IIS in lab 4.
+You should now see the new roles you installed have been added as tiles in your Server Manager listed under "Roles and Server Groups". They will also appear in the top-left area of Server Manager listed under "Dashboard", "Local Server", and "All Servers". 
 
+You will also notice that these tiles are all coloured red. This is because they have not been finalized because we have not rebooted.
 
-### Part 2: Removing Roles
+Reboot your Server1.
 
-Now that we have roles 
+When the server and Server Manager come back up, wait a moment and you will see your new Roles appear as tiles once again but now with green accents to show they are ready to go. We will leave them for now but we will come back to DNS and IIS in lab 4.
 
-1. Click "Create a New Virtual Machi
+### Part 2: Removing Roles in Server Manager
+
+Now that we have roles installed let's look at how we can remove them.
+
+1. In the top-right area of Server Manager, click on "Manage" >> "Remove Roles and Features".
+2. Click "Next" in the "Remove Roles and Features" wizard window.
+3. Select your server (it should be the only one there) and click "Next".
+4. Uncheck "Print and Document Services", click "Remove Features" in the window that appears, and then click "Next".
+5. Click "Next" again and then on the "Confirm removal selections" screen heck the "Restart the destination server automatically if required" box and then click "Remove".
+6. Windows will remove the Print Services role. Click "Close" when it is finished.
 
 ## Lab 3 Sign Off
 
