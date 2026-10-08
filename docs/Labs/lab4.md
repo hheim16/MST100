@@ -140,8 +140,26 @@ New-NetIPAddress -InterfaceAlias "Ethernet0" -IPAddress 10.10.xxx.20 -PrefixLeng
 
 **Screenshot 3: Take a screenshot of your Client1 command prompt showing the the correct IP address and subnet mask**
 
-5. test
-6. 
+5. Power off Client1
+
+## Investigation 2: Windows Firewall and Packet Filtering
+
+Earlier in this lab, you used pings from Server1 to test connectivity with the outside world. However, that was when the IP addressed was still being assigned by DHCP. Let's see what happens now that we have statically assigned an IP address to our VMs.
+
+1. Power on Server1, log in, and bring up the command prompt.
+2. Confirm that your IP address and subnet mask are still 10.10.xxx.10 and 255.255.255.0.
+3. If they are, try pinging google.
+```bash
+ping google.com
+```
+Your ping should fail (likely with a "request could not find..." error).
+
+The primary reason is that Server1 does not have a default gateway. We intentionally left that configuration blank. Because of this, Server1 does not know where to send data if the target is not on its local network. Server1, Server2, and Client1 have all been configured in such a way that they can no longer connect with the Internet or anything external to their local network. However, they can still connect to each other. Let's try that next.
+
+4. Power on Server2.
+5. Log in and navigate to the Powershell command line.
+6. Confirm that your IP address and subnet mask are still 10.10.xxx.20 and 255.255.255.0.
+7. 
 
 
 
