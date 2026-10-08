@@ -56,6 +56,8 @@ Reboot your Server1.
 
 When the server and Server Manager come back up, wait a moment and you will see your new Roles appear as tiles once again but now with green accents to show they are ready to go. We will leave them for now but we will come back to DNS and IIS in lab 4.
 
+**Screenshot 1: Take a screenshot showing the role tiles in Server Manager (DNS, IIS, Print Services)**
+
 ### Part 2: Removing Roles in Server Manager
 
 Now that we have roles installed let's look at how we can remove them.
@@ -67,6 +69,8 @@ Now that we have roles installed let's look at how we can remove them.
 5. Click "Next" again and then on the "Confirm removal selections" screen heck the "Restart the destination server automatically if required" box and then click "Remove".
 6. Windows will remove the Print Services role. Click "Close" when it is finished.
 7. Shut down Server1.
+
+**Screenshot 2: Take a screenshot showing the role tiles in Server Manager (DNS and IIS)**
 
 Now you know how to add and remove roles in Windows Server. Pretty easy, right? Well that's because we have the GUI to use on Server1. Next we will do the same thing on Server 2 with no GUI...
 
@@ -101,7 +105,7 @@ Server Core will install the Print Services role and when it has completed you w
 
 You can also confirm that the role was succussfully installed by running the "get-windowsfeature" command again. Notice that there is not an "X" next to "Print and Document Services" and "Print Server".
 
-**Take a screenshot here to show you successfully installed the Print Services role on Server2.**
+**Screenshot 3: Take a screenshot here to show you successfully installed the Print Services role on Server2.**
 
 Now we will remove that same role.
 
@@ -121,7 +125,7 @@ Windows should reboot once the role has been removed. If not, reboot manually.
 
 4. Log back in, return to the Powershell command line and enter the "get-windowsfeature" command once again. Note that "X"s next to "Print and Document Services" and "Print Server" have been removed. 
 
-**Take a screenshot here to show you successfully removed d the Print Services role on Server2.**
+**Screenshot 4: Take a screenshot here to show you successfully removed the Print Services role on Server2.**
 
 5. Shut down your Server2 with the following command:
 ```bash
@@ -149,7 +153,7 @@ Entries in the registry are called "Keys". They vary widely in structure and fun
 6. Name your backup "RegistryLegalNotice.reg" and save it to the C: drive.
 7. Using the File Explorer, navigate to your C: drive.
 
-**Take a screenshot showing your RegistryLegalNotice.reg file in the C: drive.**
+**Screenshot 5: Take a screenshot showing your RegistryLegalNotice.reg file in the C: drive directory.**
 
 ### Part 2: Modifying Registry Keys
 
@@ -162,7 +166,7 @@ Now that we have a backup, we can proceed to modify the legal keys.
 
 Once it reboots and you go to log in, notice that you will now see your legal messages.
 
-**Take a screenshot showing these messages before you log in.**
+**Screenshot 6: Take a screenshot showing these messages before you log in.**
 
 ### Part 3: Adding Registry Keys
 
@@ -178,7 +182,7 @@ Keys can be modified but we can also add keys for new functionality or if keys a
 8. Click "View" at the top of the editor and then "Refresh".
 9. Hit Winkey+R on your keyboard (a nice shortcut to bring up the "Run" dialogue box). Enter "winver.exe" and click "OK". The "About Windows" window should appear and your Name and Organization will be listed at the bottom.
 
-**Take a screenshot showing your name and organization in the "About Windows" window.**
+**Screenshot 7: Take a screenshot showing your name and organization in the "About Windows" window.**
 
 Let's add another key. This time we will add something that is actually useful on our system.
 
@@ -191,15 +195,12 @@ Let's add another key. This time we will add something that is actually useful o
 16. Close the Registry Editor and reboot Server1. Notice that when you reboot Server1 you are no longer asked to provide a reason as to why the server is shutting down. But why exactly did that happen?
 17. Log back into Server1 and navigate back to your "ShutdownReasonOn" key. Double-click it and notice its "value" data. It is set to "0". You will learn about binary and hex and decimal values in another course but that "0" value means that the key is turned off. So we added a key that specifies to turn off the functionality that asks the user why they are shutting down the server. If we were to change that value to "1" we would turn that key on and the server would once again begin asking the user for reasons when shutting down.
 
-**Take a screenshot showing your ShutdownReasonOn key and its value data.**
+**Screenshot 8: Take a screenshot showing your ShutdownReasonOn key and its value data.**
 
 ## Lab 3 Sign Off
 
-You should 
+You should have 8 screenshots that you have been taking throughout this lab.
 
-Take the following 3 screenshots:
-- Log 
-
-Put all 3 of these screenshots into a text document and upload it to the Lab 2 Submission page in Blackboard.
+Put all 8 of these screenshots into a text document and upload it to the Lab 3 Submission page in Blackboard.
 
 
