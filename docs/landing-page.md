@@ -34,7 +34,9 @@ First, you will need an external hard drive for this course.
 It is recommended you purchase one that is at least 500GB but you can technically get by with 250GB.
 Be careful about which hard drive you purchase. There are many sub-par digital storage manufacturers out there that should be avoided. Generally you will want to stick with known brands (such as Samsung, Western Digital/SanDisk, Seagate/LaCie, Kingston, Toshiba) but you will also want to consider the *type* of hard drive you get.
 
-Hard drives that are branded as "external" often have slower Read/Write speeds than drives meant for internal use. These drives also sometimes come with firmware that can cause permission issues when trying to access your virtual machines.
+Hard drives that are branded as "external" often have slower Read/Write speeds than drives meant for internal use. These drives also sometimes come with firmware that can cause permission issues when trying to access your virtual machines. 
+
+Speak with your teacher in Week 1 if you are unsure but it is generally recommended that you get an SSD
 
 
 
